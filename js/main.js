@@ -53,7 +53,7 @@ async function loadProject(projectName) {
     contentArea.innerHTML = '<div class="loading">Loading...</div>';
     
     try {
-        const response = await fetch(`content/projects/${projectName}.md`);
+        const response = await fetch(`projects/${projectName}.md`);
         if (!response.ok) throw new Error('Project not found');
         
         const markdown = await response.text();
