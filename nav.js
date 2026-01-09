@@ -8,7 +8,7 @@ const projects = [
 const nav = `
 <nav class="sidebar">
     <div class="nav-header">
-        <h1><a href="index.html">Axel Olsthoorn</a></h1>
+        <h1><a href="index.html"><img src="images/logo.svg" alt="Return to index"></a></h1>
     </div>
     <ul class="nav-links">
         ${projects.map(p => `<li><a href="${p.file}">${p.title}</a></li>`).join('')}
