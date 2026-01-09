@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:wght@200..900&display=swap');
+
 :root {
     --sidebar-width: 12vw;
     --background-color: #414141;
@@ -12,18 +14,28 @@
     box-sizing: border-box;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 30px solid var(--border-color);
+    pointer-events: none;  /* Allows clicking through */
+    z-index: 1; 
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     display: flex;
     background: var(--background-color);
-    size:100vh;
-    border: 20px solid var(--border-color);
 }
 
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    padding: 20px
+    padding: 60px
 }
 
 .nav-header img {
@@ -74,22 +86,15 @@ body.index {
 /* Main Content Area */
 
 .content {
-    margin-left: var(--sidebar-width);
-    padding: 40px 0px;
-    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50vw
 }
 
 .content h1 {
     font-size: 42px;
     margin-bottom: 10px;
     font-weight: 600;
-}
-
-.content .date {
-    color: var(--font-color);
-    font-size: 16px;
-    margin-bottom: 30px;
-    font-style: italic;
 }
 
 .content p {
@@ -135,4 +140,12 @@ body.index {
     height: 120px;
     padding: 20px;
     z-index: 100;
+}
+
+.footer .date {
+    color: var(--font-color);
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    padding-left: 33.333vw;
 }
