@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Border Frame
 body::before {
     content: '';
     position: fixed;
@@ -22,12 +22,13 @@ body::before {
     right: 0;
     bottom: 0;
     border: 30px solid var(--border-color);
-    pointer-events: none;  /* Allows clicking through */
+    pointer-events: none; 
     z-index: 1; 
 }
+*/
 
 body {
-    font-family: "Zalando Sans Expanded", sans-serif;
+    font-family: url(fonts/VIDA-REGULAR.OTF); /* "Zalando Sans Expanded", sans-serif; */
     display: flex;
     background: var(--background-color);
 }
@@ -73,11 +74,10 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    letter-spacing: -0.2em;
-    word-spacing: -1em; 
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+    color: #ffffff;
+    letter-spacing: 0.1em;
     white-space: nowrap;
+    font-size: 24px;
 }
 
 body.index {
@@ -91,7 +91,6 @@ body.index {
 .content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 50vw
 }
 
 .content h1 {
@@ -124,14 +123,23 @@ body.index {
 .grid-4 {
     grid-template-columns: repeat(4, 1fr);
 }
+.grid-hero {
+    width: 100vw;
+    height: 100vh;
+}
+
+.grid-hero img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
 
 .grid-single img,
 .grid-2 img,
 .grid-3 img,
 .grid-4 img {
     max-width: 100%;
-    height: auto;
-    display: block;
+
 }
 
 .footer {
