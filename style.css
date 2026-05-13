@@ -28,7 +28,7 @@ body::before {
 */
 
 body {
-    font-family: url(fonts/VIDA-REGULAR.OTF); /* "Zalando Sans Expanded", sans-serif; */
+    font-family: Vida; src: url('fonts/VIDA-REGULAR.OTF'); /* "Zalando Sans Expanded", sans-serif; */
     display: flex;
     background: var(--background-color);
 }
