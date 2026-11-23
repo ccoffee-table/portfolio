@@ -1,4 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:wght@200..900&display=swap');
+@font-face {
+    font-family: 'Vida';
+    src: url('fonts/VIDA-REGULAR.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vida';
+    src: url('fonts/VIDA-BOLD.OTF') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vida';
+    src: url('fonts/VIDA-LIGHT.OTF') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vida';
+    src: url('fonts/VIDA-ITALIC.OTF') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
 
 :root {
     --sidebar-width: 12vw;
@@ -13,25 +39,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Border Frame
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 30px solid var(--border-color);
-    pointer-events: none; 
-    z-index: 1; 
-}
-*/
 
 body {
-    font-family: Vida; src: url('fonts/VIDA-REGULAR.OTF'); /* "Zalando Sans Expanded", sans-serif; */
+    font-family: 'Vida', sans-serif;
     display: flex;
     background: var(--background-color);
 }
+body h1 {
+    font-weight: 400;}
 
 /* Sidebar Navigation */
 .sidebar {
@@ -46,7 +61,7 @@ body {
 
 .nav-header a {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 100;
     text-decoration: none;
     color: var(--font-color);
 }
@@ -78,6 +93,7 @@ body {
     letter-spacing: 0.1em;
     white-space: nowrap;
     font-size: 24px;
+    font-weight: 100;
 }
 
 body.index {
@@ -91,18 +107,20 @@ body.index {
 .content {
     margin-left: auto;
     margin-right: auto;
+    padding: 40px;
 }
 
 .content h1 {
     font-size: 42px;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .content p {
     line-height: 1.7;
     color: var(--font-color);
     margin-bottom: 30px;
+    font-size: 36px;
 }
 
 .grid-2,
@@ -156,7 +174,7 @@ body.index {
 .footer .date {
     color: var(--font-color);
 
-    font-weight: 600;
+    font-weight: 100;
     font-size: 30px;
     padding-left: 33.333vw;
 }
